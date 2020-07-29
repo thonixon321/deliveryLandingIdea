@@ -1,6 +1,10 @@
 .container {
   display: grid;
-  grid-template-rows: 85vh repeat(8, minmax(29rem, auto));
+  grid-template-rows: minmax(57rem, 75vh) 2rem repeat(8, minmax(29rem, auto));
   grid-template-columns: repeat(12, minmax(10rem, 1fr));
   gap: 3rem;
+
+  @include respond(phone) {
+    grid-template-columns: repeat(12, minmax(7rem, 1fr));
+  }
 }

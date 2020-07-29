@@ -1,6 +1,14 @@
 //FONTS
 $font-primary: Calistoga, Arial, sans-serif;
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == "phone" {
+    @media only screen and (max-width: 25em) {
+      @content;
+    }
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -12,6 +20,10 @@ $font-primary: Calistoga, Arial, sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px / 16px = 62.5%
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -23,6 +35,10 @@ body {
   font-size: 8rem;
   color: rgb(156, 156, 76);
   margin-bottom: 0.5rem;
+
+  @include respond(phone) {
+    font-size: 6rem;
+  }
 }
 
 .heading--2 {

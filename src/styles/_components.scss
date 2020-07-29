@@ -18,10 +18,14 @@
 
 .hero__img {
   grid-column: 5 / 9;
-  grid-row: 2 / -1;
+  grid-row: 1 / -1;
 
-  margin-top: -7rem;
   animation: moveInLeft 1s ease-out;
+
+  img {
+    height: 105%;
+    width: 71%;
+  }
 }
 
 .header-text {
@@ -29,7 +33,7 @@
   grid-row: 3 / 6;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   justify-self: center;
   &__main {
     font-size: 5rem;
@@ -40,6 +44,7 @@
     font-size: 1.63rem;
     font-family: Arial, Helvetica, sans-serif;
     animation: moveInRight 1s ease-out;
+    margin: 4rem 0;
   }
 
   &__button {
@@ -121,17 +126,17 @@
 
 .curvedSvg {
   grid-column: 1 / -1;
-  grid-row: 2 / 3;
+  grid-row: 7 / 8;
   width: 100%;
-  height: 19rem;
-  transform: translateY(-18.6rem);
+  height: 14rem;
   z-index: 5;
+  transform: translateY(1rem);
   transition: all 0.5s;
 }
 
 .promote {
   grid-column: 4/10;
-  grid-row: 2/3;
+  grid-row: 3/4;
 
   display: flex;
   flex-direction: column;
@@ -157,18 +162,18 @@
 
     &-1 {
       grid-column: 2 / span 2;
-      grid-row: 3 / 5;
+      grid-row: 4 / 6;
     }
 
     &-2 {
       grid-column: 10 / span 2;
-      grid-row: 3 / 5;
+      grid-row: 4 / 6;
     }
   }
 
   &__video {
     grid-column: 4 / span 6;
-    grid-row: 3 / 5;
+    grid-row: 4 / 6;
     height: 80%;
     align-self: center;
   }
@@ -181,7 +186,7 @@
   }
 
   &__button {
-    width: 75%;
+    width: 100%;
     height: 6rem;
     border: none;
     background: white;
@@ -305,8 +310,8 @@
 }
 
 .info__text--1 {
-  grid-row: 5/7;
-  grid-column: 3 / span 4;
+  grid-row: 6/8;
+  grid-column: 2 / span 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -315,7 +320,7 @@
 }
 
 .info__img--1 {
-  grid-row: 5/7;
+  grid-row: 6/8;
   grid-column: 7 / span 4;
   background-color: lightblue;
   overflow: hidden;
@@ -328,11 +333,15 @@
 
 .info__img--1 img {
   height: 102%;
+
+  @include respond(phone) {
+    width: 90%;
+  }
 }
 
 .info__text--2 {
-  grid-row: 7 / 9;
-  grid-column: 7 / span 4;
+  grid-row: 8 / 10;
+  grid-column: 7 / span 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -340,7 +349,7 @@
 }
 
 .info__img--2 {
-  grid-row: 7 / 9;
+  grid-row: 8 / 10;
   grid-column: 3 / span 4;
 
   background-color: rgb(208, 230, 173);
@@ -356,7 +365,7 @@
 
 .footer {
   height: 100%;
-  grid-row: 9 / 10;
+  grid-row: 10 / 11;
   grid-column: 1 / -1;
   background-color: rgb(66, 59, 59);
   display: grid;
@@ -370,6 +379,10 @@
 
   &__header {
     font-size: 3rem;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
 
   &__list {
@@ -402,7 +415,7 @@
   }
 
   &__logo {
-    width: 100%;
+    width: 80%;
     align-self: center;
     justify-self: start;
     grid-column: 10/-1;
