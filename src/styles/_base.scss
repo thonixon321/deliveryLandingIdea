@@ -2,6 +2,26 @@
 $font-primary: Calistoga, Arial, sans-serif;
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == "laptop" {
+    @media only screen and (max-width: 93.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == "laptop-sm" {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == "tab-lg" {
+    @media only screen and (max-width: 71.875em) {
+      @content;
+    }
+  }
+  @if $breakpoint == "tab-md" {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
   @if $breakpoint == "phone" {
     @media only screen and (max-width: 25em) {
       @content;
@@ -21,8 +41,12 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px / 16px = 62.5%
 
-  @include respond(phone) {
+  @include respond(laptop) {
     font-size: 50%;
+  }
+
+  @include respond(tab-md) {
+    font-size: 42%;
   }
 }
 
@@ -32,18 +56,29 @@ body {
 
 //Typography
 .heading--1 {
-  font-size: 8rem;
+  font-size: 6rem;
   color: rgb(156, 156, 76);
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 
-  @include respond(phone) {
-    font-size: 6rem;
+  @include respond(laptop-sm) {
+    font-size: 4rem;
+  }
+  @include respond(tab-md) {
+    font-size: 3rem;
   }
 }
 
 .heading--2 {
   font-size: 3rem;
   text-align: center;
+
+  @include respond(laptop-sm) {
+    font-size: 2.5rem;
+  }
+  @include respond(tab-md) {
+    font-size: 2rem;
+  }
 }
 
 @keyframes moveInLeft {

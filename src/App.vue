@@ -73,7 +73,7 @@
     </div>
     <div class='promote'>
       <h1 class='heading--1'>
-        Best Foods
+        Delicious Foods
       </h1>
       <p class='heading--2'>
         ShopIt takes eating to a whole new level with its deliciousness and gourmet specialties
@@ -141,7 +141,7 @@
 
     <div class='info__text--1'>
       <h1 class='heading--1'>
-        Great Delivery
+        Professional Delivery
       </h1>
       <p class='heading--2'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, laudantium voluptatem quis deserunt eaque ex suscipit.
@@ -269,7 +269,7 @@ export default {
 .features {
   &__bg {
     grid-column: 1 / -1;
-    grid-row: 3 / 7;
+    grid-row: 2 / span 2;
     align-self: stretch;
     z-index: -1;
     background-image: url(./assets/img/circlesBG.svg);
